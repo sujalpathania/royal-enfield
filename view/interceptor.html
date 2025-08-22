@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/interceptor.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Interceptor 650</h1>
+      <p class="subtitle">Modern Classic • Twin Power • Timeless Design</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://images.timesdrive.in/photo/msid-151059796,thumbsize-454698,width-560,height-250,false/151059796.jpg" alt="Royal Enfield Interceptor 650">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://images.hindustantimes.com/auto/img/2023/09/26/1600x900/Royal_Enfield_Interceptor_650_Europe_1695724825862_1695724830649.jpg" alt="Interceptor 650 - Front View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://crossroadthebikerstop.com/cdn/shop/products/474330520-1000X1000.jpg?v=1663316933" alt="Interceptor 650 - Side View" onclick="changeImage(this)" width="200">
+        <img class="thumbnail" src="https://www.bikenbiker.com/cdn/shop/files/touring-seat-for-royal-enfield-interceptor-650-gt-trip-machine-company-motor-vehicle-seating-270.jpg?v=1737227636&width=1946" alt="Interceptor 650 - Rear View" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹3,10,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Parallel Twin, 4-Stroke, SOHC</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">648cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Air-Oil Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">47 bhp @ 7,250 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">52 Nm @ 5,250 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">6-Speed with Slip Assist</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">13.7 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">25-30 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">202 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">804 mm</span></li>
+          <li><span class="spec-label">Ground Clearance</span><span class="spec-value">174 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Classic Retro Styling</li>
+          <li>LED Lighting All Around</li>
+          <li>Analog-Digital Instrument Cluster</li>
+          <li>Dual Channel ABS</li>
+          <li>Telescopic Front Forks</li>
+          <li>Twin Rear Shock Absorbers</li>
+          <li>Alloy Wheels with Pirelli Tyres</li>
+          <li>Electric Start</li>
+          <li>Slip & Assist Clutch</li>
+          <li>Upright Riding Position</li>
+          <li>Split Dual Seat</li>
+          <li>Dual Exhaust System</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Interceptor 650</h2>
+      <p class="description">
+        The Royal Enfield Interceptor 650 is a modern classic motorcycle that pays homage to the iconic Interceptors of the 1960s while delivering contemporary performance and reliability. Powered by Royal Enfield's 650cc parallel-twin engine, this motorcycle offers smooth power delivery and ample torque, making it perfect for both city commuting and highway cruising. With its timeless design and modern engineering, the Interceptor 650 brings back the golden era of motorcycling with 21st century refinement.
+      </p>
+      <p class="description">
+        The Interceptor 650 features a comfortable upright riding position, premium suspension components, and responsive handling characteristics. The retro-inspired design includes chrome accents, spoke wheels (on some variants), and classic color schemes that recall Royal Enfield's rich heritage. Whether you're a seasoned rider or new to motorcycling, the Interceptor 650 offers an accessible yet engaging riding experience that celebrates the simple joy of riding.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">47</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">52</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">170+</span>
+          <span class="performance-label">km/h Top Speed</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">13.7L</span>
+          <span class="performance-label">Fuel Tank</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="/features">
+        ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+ 
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+    
+      thumbnail.classList.add('active');
+      
+ 
+      document.getElementById('mainImage').src = thumbnail.src;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>

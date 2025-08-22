@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/classic.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Classic 350</h1>
+      <p class="subtitle">Vintage Charm • Modern Reliability • Iconic Design</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://i.ytimg.com/vi/3Obhq63ZAek/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLANZcN4JMtjHshfh7ijgRymTWyV4w" alt="Royal Enfield Classic 350">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://imgd.aeplcdn.com/642x361/n/cw/ec/109729/royalenfield-classic-350-head-light9.jpeg?isig=0&wm=2&q=75" alt="Classic 350 - Front View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://www.financialexpress.com/wp-content/uploads/2021/09/2021-royal-enfield-classic-350.jpg" alt="Classic 350 - Side View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://motoringworld.in/wp-content/uploads/2024/12/Survivor-RE-Classic-350.png" alt="Classic 350 - Rear View" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹1,93,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Single Cylinder, 4-Stroke</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">349cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Air-Oil Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">20.2 bhp @ 6,100 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">27 Nm @ 4,000 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">5-Speed Manual</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">13 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">35-40 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">195 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">805 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Vintage Classic Styling</li>
+          <li>Electric Start & Kick Start</li>
+          <li>Single Channel ABS</li>
+          <li>Disc Brake (Front & Rear)</li>
+          <li>Spoke Wheels with Tubeless Tyres</li>
+          <li>Semi-Digital Instrument Cluster</li>
+          <li>Chrome Exhaust with Classic Note</li>
+          <li>Telescopic Front Suspension</li>
+          <li>Twin Gas-Charged Shock Absorbers</li>
+          <li>Halogen Headlamp</li>
+          <li>Classic Tear-Drop Fuel Tank</li>
+          <li>Comfortable Touring Seat</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Classic 350</h2>
+      <p class="description">
+        The Royal Enfield Classic 350 is a perfect blend of vintage aesthetics and modern engineering. This motorcycle pays homage to the golden era of motorcycling while incorporating contemporary technology for enhanced safety and performance. With its distinctive retro styling, chrome accents, and the legendary Royal Enfield thump, the Classic 350 captures the essence of classic motorcycling.
+      </p>
+      <p class="description">
+        Built on the proven J-platform, the Classic 350 features improved refinement, better fuel efficiency, and enhanced reliability. Whether you're cruising through city streets or embarking on weekend adventures, this motorcycle delivers a smooth, comfortable ride with an unmistakable character that turns heads wherever you go. The Classic 350 is not just a motorcycle; it's a statement of style and a celebration of motorcycling heritage.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">20.2</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">27</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">38+</span>
+          <span class="performance-label">kmpl Mileage</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">13L</span>
+          <span class="performance-label">Fuel Tank</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="colors-section">
+      <h2>Available Colors</h2>
+      <div class="color-options">
+        <div class="color-option black" data-color="Jet Black"></div>
+        <div class="color-option chrome" data-color="Chrome ABS"></div>
+        <div class="color-option stealth" data-color="Stealth Black"></div>
+        <div class="color-option signals" data-color="Signals 350"></div>
+        <div class="color-option vintage" data-color="Vintage Brown"></div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="/features">
+       ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+
+      thumbnail.classList.add('active');
+
+      document.getElementById('mainImage').src = thumbnail.src;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>

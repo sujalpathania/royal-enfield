@@ -1,0 +1,15 @@
+[
+  {
+    "bikeModel": "Royal Enfield Classic 350",
+    "firstName": "sujal",
+    "lastName": "Pathania",
+    "email": "abc@gmail.com",
+    "phone": "123456789",
+    "address": "H-No 23,upperpart,abrol nagar",
+    "city": "Pathankot",
+    "state": "Punjab",
+    "pincode": "145001",
+    "preferredDate": "2025-08-25",
+    "preferredTime": "09:00-11:00"
+  }
+]

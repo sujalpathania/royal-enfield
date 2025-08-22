@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/gt.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Continental GT 650</h1>
+      <p class="subtitle">Café Racer • Twin Power • Pure Adrenaline</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://ssmotocorp.com/cdn/shop/files/rn-image_picker_lib_temp_35006bd7-d007-46b7-aba1-2e2097a39ffd.jpg?v=1749478312&width=1946" alt="Royal Enfield Continental GT 650">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://media.motoservices.com/media/cache/slider_lg/media/gallery/20151/Royal-Enfield-Continental-GT-Thunder-Edition-2023-4.jpg" alt="Continental GT 650 - Front View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://img.indianautosblog.com/2021/05/18/royal-enfield-continental-gt-650-engine-0329.jpg" alt="Continental GT 650 - Side View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://carorbis.com/wp-content/uploads/2024/06/29_cleanup-1024x1024.png" alt="Continental GT 650 - Rear View" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹3,19,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Parallel Twin, 4-Stroke, SOHC</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">648cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Air-Oil Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">47 bhp @ 7,150 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">52 Nm @ 5,250 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">6-Speed with Slip Assist</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">12.5 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">25-30 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">198 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">804 mm</span></li>
+          <li><span class="spec-label">Ground Clearance</span><span class="spec-value">174 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Classic Café Racer Styling</li>
+          <li>LED Headlamp with DRL</li>
+          <li>Digital-Analog Instrument Cluster</li>
+          <li>Dual Channel ABS</li>
+          <li>USD Front Forks</li>
+          <li>Twin Rear Shock Absorbers</li>
+          <li>Alloy Wheels with Pirelli Tyres</li>
+          <li>Electric Start</li>
+          <li>Slip & Assist Clutch</li>
+          <li>Clip-on Handlebars</li>
+          <li>Single Seat with Cowl</li>
+          <li>Dual Exhaust System</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Continental GT 650</h2>
+      <p class="description">
+        The Royal Enfield Continental GT 650 is a modern interpretation of the classic café racer, blending timeless design with contemporary performance. Powered by Royal Enfield's acclaimed 650cc parallel-twin engine, the Continental GT delivers exhilarating performance while maintaining the brand's signature character. With its aggressive riding position, responsive handling, and distinctive styling, this motorcycle is built for riders who crave both style and substance.
+      </p>
+      <p class="description">
+        The Continental GT 650 features premium components including USD front forks, Pirelli tires, and dual-channel ABS for confident braking. The café racer-inspired design includes clip-on handlebars, rear-set footpegs, and a single seat with an optional cowl. Whether carving through mountain roads or making a statement in the city, the Continental GT 650 offers an engaging riding experience that honors the café racer tradition while delivering modern reliability.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">47</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">52</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">180+</span>
+          <span class="performance-label">km/h Top Speed</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">12.5L</span>
+          <span class="performance-label">Fuel Tank</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="/features">
+        ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+     
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+
+      thumbnail.classList.add('active');
+
+      document.getElementById('mainImage').src = thumbnail.src;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/super.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Super Meteor 650</h1>
+      <p class="subtitle">Cruiser Excellence • Twin-Cylinder Power • Highway Domination</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://www.vygrnews.com/upload/blog/banner/original/16699578091385157162.jpg" alt="Royal Enfield Super Meteor 650" width="200">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://cdn.dealerspike.com/imglib/v1/800x600/imglib/Assets/Inventory/8C/C9/8CC9A8D1-00E6-4F6F-A18A-51CA018C9B90.jpg" alt="Super Meteor 650 - Front View" onclick="changeImage(this)" width="200">
+        <img class="thumbnail" src="https://bikes.motobank.co.uk/fp/42291/royal-enfield-super-meteor-650-interstellar-2023-interstellar-green_645144.jpg" alt="Super Meteor 650 - Side View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://bykology.com/wp-content/uploads/2024/09/10.jpg" alt="Super Meteor 650 - Rear View" onclick="changeImage(this)" width="200">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹3,48,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Parallel Twin, 4-Stroke</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">648cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Oil-Air Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">47 bhp @ 7,250 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">52.3 Nm @ 5,650 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">6-Speed Manual</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">15.7 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">25-28 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">241 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">740 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Premium Cruiser Styling</li>
+          <li>Dual-Channel ABS</li>
+          <li>Tripper Dash Navigation</li>
+          <li>LED Lighting All Around</li>
+          <li>Forward Controls</li>
+          <li>Comfortable Touring Seat</li>
+          <li>Chrome Exhaust with Twin Pipes</li>
+          <li>Spoke Wheels with Tubeless Tyres</li>
+          <li>USD Front Forks</li>
+          <li>Dual Rear Shock Absorbers</li>
+          <li>USB Charging Port</li>
+          <li>Make-It-Yours Customization</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Super Meteor 650</h2>
+      <p class="description">
+        The Royal Enfield Super Meteor 650 represents the pinnacle of cruiser motorcycling from the iconic British brand. Built around the proven 650cc parallel-twin engine, this motorcycle delivers exceptional highway performance with refined power delivery and smooth acceleration. The Super Meteor 650 is designed for riders who appreciate the classic cruiser aesthetic combined with modern engineering and reliability.
+      </p>
+      <p class="description">
+        With its low-slung profile, forward controls, and relaxed riding position, the Super Meteor 650 is built for long-distance touring and highway cruising. The motorcycle features premium touches like LED lighting, Tripper navigation, and extensive customization options through Royal Enfield's 'Make-It-Yours' program. Whether you're cruising city boulevards or embarking on cross-country adventures, the Super Meteor 650 delivers comfort, style, and performance in equal measure.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">47</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">52.3</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">26+</span>
+          <span class="performance-label">kmpl Mileage</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">15.7L</span>
+          <span class="performance-label">Fuel Tank</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="colors-section">
+      <h2>Available Colors</h2>
+      <div class="color-options">
+        <div class="color-option astral-black" data-color="Astral Black"></div>
+        <div class="color-option astral-blue" data-color="Astral Blue"></div>
+        <div class="color-option astral-green" data-color="Astral Green"></div>
+        <div class="color-option interstellar-grey" data-color="Interstellar Grey"></div>
+        <div class="color-option celestial-red" data-color="Celestial Red"></div>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="index.html">
+        ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+            thumbnail.classList.add('active');
+            document.getElementById('mainImage').src = thumbnail.src;
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>

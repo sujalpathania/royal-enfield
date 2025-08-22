@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Royal Enfield Bullet</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <h1>Royal Enfield Bullet</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="active">Contact</a>
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Login</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Have questions, feedback, or want to connect? We'd love to hear from you!</p>
+
+    <form method="post" action="/contact">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      <!-- <input type="file" name="file-upload" multiple>
+      <button>upload</button><br> -->
+
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Royal Enfield Fan Site. All rights reserved.</p>
+  </footer>
+  <script>
+      const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const form = document.querySelector("form");
+const message=document.getElementById("message");
+  form.addEventListener("submit", (event) => {
+    if (!name.value || !email.value || !message.value) {
+alert("All fields are required! Please enter your name, email, and message.");
+      event.preventDefault(); 
+    }
+  });
+  </script>
+</body>
+</html>

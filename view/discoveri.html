@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Enfield Interceptor 650 | Twin Cylinder Power</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    
+    .model-header {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+                  url('https://images.unsplash.com/photo-1658324325792-c338bf4c216d?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .model-header::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(transparent, #f5f5f5);
+      z-index: 1;
+    }
+    
+    .model-header-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .model-header-content h1 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    
+    .model-header-content p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 400;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .model-details {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    
+    .model-details h2 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 2.5rem;
+      color: #d92323;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .model-details h2::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: #d92323;
+      margin: 15px auto;
+    }
+    
+    .model-details p {
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+    
+    .specs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .spec-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #d92323;
+    }
+    
+    .spec-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .spec-card h3 {
+      color: #d92323;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .spec-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: #d92323;
+    }
+    
+    .spec-item {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    
+    .spec-name {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .spec-value {
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #333 100%), 
+                  url('https://images.unsplash.com/photo-1566891438109-5f3eed9a5560?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background-blend-mode: overlay;
+    }
+    
+    .cta-section h2 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 35px;
+      background-color: #d92323;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .back-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+      z-index: -1;
+    }
+    
+    .back-button:hover {
+      background-color: #b51d1d;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .back-button:hover::before {
+      left: 100%;
+    }
+    
+    .interceptor-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(217, 35, 35, 0.9);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    @media (max-width: 768px) {
+      .model-header-content h1 {
+        font-size: 2.8rem;
+      }
+      
+      .model-header {
+        height: 60vh;
+      }
+      
+      .specs-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="model-header">
+    <div class="model-header-content">
+      <div class="interceptor-badge">Twin Power</div>
+      <h1>Interceptor 650</h1>
+      <p>The perfect blend of classic styling and modern twin-cylinder performance</p>
+    </div>
+  </section>
+
+  <section class="model-details">
+    <h2>Modern Classic</h2>
+    <p>The Royal Enfield Interceptor 650 brings together timeless design with the power and refinement of a parallel-twin engine. With its 648cc engine producing 47 bhp, it delivers smooth, effortless power that makes every ride special.</p>
+    
+    <div class="specs-container">
+      <div class="spec-card">
+        <h3>Engine & Performance</h3>
+        <div class="spec-item">
+          <span class="spec-name">Engine Type</span>
+          <span class="spec-value">Parallel Twin, Air-Oil Cooled</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Displacement</span>
+          <span class="spec-value">648cc</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Power</span>
+          <span class="spec-value">47 bhp @ 7250 rpm</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Torque</span>
+          <span class="spec-value">52 Nm @ 5250 rpm</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Fuel System</span>
+          <span class="spec-value">Electronic Fuel Injection</span>
+        </div>
+      </div>
+      
+      <div class="spec-card">
+        <h3>Dimensions & Chassis</h3>
+        <div class="spec-item">
+          <span class="spec-name">Kerb Weight</span>
+          <span class="spec-value">202 kg</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Seat Height</span>
+          <span class="spec-value">804 mm</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Fuel Capacity</span>
+          <span class="spec-value">13.7 liters</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Ground Clearance</span>
+          <span class="spec-value">174 mm</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Wheelbase</span>
+          <span class="spec-value">1400 mm</span>
+        </div>
+      </div>
+      
+      <div class="spec-card">
+        <h3>Features</h3>
+        <div class="spec-item">
+          <span class="spec-name">ABS</span>
+          <span class="spec-value">Dual Channel</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Suspension (Front/Rear)</span>
+          <span class="spec-value">Telescopic / Twin Shocks</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Instrument Console</span>
+          <span class="spec-value">Analog-Digital</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Tires</span>
+          <span class="spec-value">18" Front & Rear</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-name">Color Options</span>
+          <span class="spec-value">Baker Express, Canyon Red</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta-section">
+    <h2>Experience the Twin Power</h2>
+    <p>The Interceptor 650 is waiting to take you on your next great ride</p>
+    <a href="/navbar" class="back-button">Back to Models</a>
+  </section>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const specCards = document.querySelectorAll('.spec-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      specCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

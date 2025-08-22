@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Bike List Styles */
+.bike-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.bike-list li {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bike-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bike-list b {
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+
+.bike-list img {
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-more-btn, .free-trial-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-more-btn {
+    background-color: #333;
+    color: white;
+}
+
+.view-more-btn:hover {
+    background-color: #555;
+}
+
+.view-more-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.free-trial-btn {
+    background-color: #d4af37;
+    color: #000;
+}
+
+.free-trial-btn:hover {
+    background-color: #e8c252;
+    transform: translateY(-2px);
+}
+
+.free-trial-btn i {
+    margin-left: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bike-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .view-more-btn, .free-trial-btn {
+        width: 100%;
+    }
+}

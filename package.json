@@ -1,0 +1,24 @@
+{
+  "name": "enfield",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://sujal-pathania.github.io/project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "git": "^0.1.5",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

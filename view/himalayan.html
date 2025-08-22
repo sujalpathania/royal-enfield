@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/himalayan.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Himalayan 450</h1>
+      <p class="subtitle">Adventure Redefined • Next-Gen Performance • Liquid-Cooled Power</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://autoengina.com/cdn/shop/files/him_450_bash_plate_img4.jpg?v=1725275194" alt="Royal Enfield Himalayan 450">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://hyperrider.in/wp-content/uploads/2024/03/24.png" alt="Himalayan 450 - Front View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://gaadiwaadi.com/wp-content/uploads/2023/11/royal-enfield-himalayan-450-5-1068x686.jpg.webp" alt="Himalayan 450 - Side View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://lrlmotors.com/cdn/shop/files/royal-enfield-himalayan-450-motocrux-marvel-saddle-stay-507991.jpg?v=1714878905" alt="Himalayan 450 - Rear View" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹2,85,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Single Cylinder, 4-Stroke</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">452cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Liquid Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">40 bhp @ 8,000 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">40 Nm @ 5,500 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">6-Speed Manual</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">17 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">28-32 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">196 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">825 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Next-Gen Adventure Design</li>
+          <li>Liquid-Cooled Engine</li>
+          <li>6-Speed Gearbox</li>
+          <li>TFT Display with Navigation</li>
+          <li>Ride-by-Wire Technology</li>
+          <li>Multiple Riding Modes</li>
+          <li>LED Headlamp & DRL</li>
+          <li>43mm USD Front Forks</li>
+          <li>Monoshock Rear Suspension</li>
+          <li>21/17 Spoke Wheels</li>
+          <li>Dual-Channel ABS</li>
+          <li>Switchable ABS (Rear)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Himalayan 450</h2>
+      <p class="description">
+        The Royal Enfield Himalayan 450 represents a quantum leap in adventure motorcycling technology. Built around an all-new liquid-cooled 452cc engine, this motorcycle delivers significantly more power and refinement compared to its predecessor. The Himalayan 450 features cutting-edge technology including ride-by-wire throttle, multiple riding modes, and a comprehensive TFT display system, making it the most advanced Royal Enfield ever built.
+      </p>
+      <p class="description">
+        Designed specifically for serious adventure touring, the Himalayan 450 combines rugged capability with modern sophistication. The improved suspension setup, enhanced ground clearance, and robust build quality make it capable of tackling the most challenging terrains. Whether you're navigating city traffic or exploring remote mountain passes, the Himalayan 450 delivers the perfect balance of performance, comfort, and reliability that adventure riders demand.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">40</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">40</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">30+</span>
+          <span class="performance-label">kmpl Mileage</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">17L</span>
+          <span class="performance-label">Fuel Tank</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="/features">
+        ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+   
+      thumbnail.classList.add('active');
+ 
+      document.getElementById('mainImage').src = thumbnail.src;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>

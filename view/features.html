@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Enfield - Dashboard</title>
+<link rel="stylesheet" href="features.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<h1>Welcome, Rider! 🚴 Royal Enfield Dashboard</h1>
+<p>Explore the latest Royal Enfield models and choose your dream ride.</p>
+<hr>
+
+<h2> Royal Enfield Bike Models</h2>
+<ul class="bike-list">
+    <li>
+        <b>Standard 350</b> - ₹1.13 Lakh  
+        <br>Engine: 349cc | Mileage: 35 kmpl  
+        <br><img src="https://bd.gaadicdn.com/processedimages/royal-enfield/2021-bullet-350/source/2021-bullet-35065f059e55f14b.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/standard">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a> <i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Classic 350</b> - ₹1.76-2.20 Lakh  
+        <br>Engine: 346cc | Mileage: 37 kmpl  
+        <br><img src="https://www.otocapital.in/_next/image?url=https%3A%2F%2Fassets.otocapital.in%2Fproduction%2Fredditch-red-royal-enfield-classic-350-image.jpeg&w=1536&q=75" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/classic">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a> <i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Hunter 350</b> - ₹1.4-1.7 Lakh  
+        <br>Engine: 349cc | Mileage: 36 kmpl  
+        <br><img src="https://bikekhoj.com/wp-content/uploads/2022/08/Hunter-350-Left-Front-Three-Quarter-1080x675.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/hunter">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a> <i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Super Meteor 650</b> - ₹3.48-3.95 Lakh  
+        <br>Engine: 648cc | Mileage: 23 kmpl  
+        <br><img src="https://english.cdn.zeenews.com/sites/default/files/2022/11/08/1114283-royal-enfield-super-meteor-650.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/super">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a><i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Himalayan 450</b> - ₹2.85-2.95 Lakh  
+        <br>Engine: 452cc | Mileage: 28 kmpl  
+        <br><img src="https://cdn.bikedekho.com/processedimages/royal-enfield/himalayan-450/494X300/himalayan-4506565cc8f0ef04.jpg?imwidth=400&impolicy=resize" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/himalayan">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a> <i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Meteor 350</b> - ₹2.82.32 Lakh  
+        <br>Engine: 648cc | Mileage: 24 kmpl  
+        <br><img src="https://www.motorbeam.com/wp-content/uploads/2022-Royal-Enfield-Meteor-350-Colours-Matt-Green-1200x675.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/meteor">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a><i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Continental GT 650</b> - ₹3.01-3.25 Lakh  
+        <br>Engine: 648cc | Mileage: 25 kmpl  
+        <br><img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/07/2023-royal-enfield-continental-gt-650-review-1-1.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/gt">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a><i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+    <li>
+        <b>Interceptor 650</b> - ₹3.09-3.37 Lakh  
+        <br>Engine: 648cc | Mileage: 25 kmpl  
+        <br><img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2022/12/royal-enfield-interceptor-650.jpg" width="200">
+        <div class="button-group">
+            <button class="view-more-btn"><a href="/interceptor">View More</a></button>
+            <button class="free-trial-btn"><a href="/trialform">Free Test Ride</a><i class="fas fa-motorcycle"></i></button>
+        </div>
+    </li>
+</ul>
+
+<hr>
+<p>&copy; 2025 Royal Enfield Dashboard. All Rights Reserved.</p>
+
+<script>
+
+document.querySelectorAll('.free-trial-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const bikeName = this.closest('li').querySelector('b').textContent;
+        alert(`Thank you for requesting a free test ride for the ${bikeName}!.`);
+    });
+});
+</script>
+
+</body>
+</html>

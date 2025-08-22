@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/hunter.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Royal Enfield Hunter 350</h1>
+      <p class="subtitle">Urban Spirit • Youthful Energy • Modern Classic</p>
+    </div>
+
+    <div class="bike-gallery">
+      <img class="main-image" id="mainImage" src="https://navbharattimes.indiatimes.com/thumb/93707398/royal-enfield-hunter-350-delivery-93707398.jpg?imgsize-143868&width=1600&height=900&resizemode=75" alt="Royal Enfield Hunter 350">
+      <div class="image-thumbnails">
+        <img class="thumbnail active" src="https://i.ytimg.com/vi/ZXVm6MB_3Rs/maxresdefault.jpg" alt="Hunter 350 - Front View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://auto.hindustantimes.com/cms-images/royalenfield_hunter-350-2025/images/exterior_royalenfield-hunter350_rear-tyre-view_930x620.jpeg" alt="Hunter 350 - Side View" onclick="changeImage(this)">
+        <img class="thumbnail" src="https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImFibHhsM2JtYXg0OTMtU1REVlRMUFQiLCJ3IjpbeyJmbiI6IjZtZ2p3bHA3a2dkYjItU1REVlRMUFQiLCJzIjoiMTYiLCJhIjoiMCIsInAiOiIxMCwtMTAifV19.5EdifnHINNTQoLfEwcW4RSp47nIsVhKivI2XcNMXG3A/image;s=5120x0;q=100" alt="Hunter 350 - Rear View" onclick="changeImage(this)">
+      </div>
+    </div>
+
+    <div class="price-section">
+      <div class="price">₹1,50,000</div>
+      <div class="price-note">Ex-showroom price (varies by location)</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="specs-section">
+        <h2>Technical Specifications</h2>
+        <ul class="bike-specs">
+          <li><span class="spec-label">Engine Type</span><span class="spec-value">Single Cylinder, 4-Stroke</span></li>
+          <li><span class="spec-label">Displacement</span><span class="spec-value">349cc</span></li>
+          <li><span class="spec-label">Cooling</span><span class="spec-value">Air-Oil Cooled</span></li>
+          <li><span class="spec-label">Max Power</span><span class="spec-value">20.2 bhp @ 6,100 rpm</span></li>
+          <li><span class="spec-label">Max Torque</span><span class="spec-value">27 Nm @ 4,000 rpm</span></li>
+          <li><span class="spec-label">Transmission</span><span class="spec-value">5-Speed Manual</span></li>
+          <li><span class="spec-label">Fuel Tank</span><span class="spec-value">13 Liters</span></li>
+          <li><span class="spec-label">Mileage</span><span class="spec-value">36-40 kmpl</span></li>
+          <li><span class="spec-label">Kerb Weight</span><span class="spec-value">181 kg</span></li>
+          <li><span class="spec-label">Seat Height</span><span class="spec-value">800 mm</span></li>
+        </ul>
+      </div>
+
+      <div class="features-section">
+        <h2>Key Features</h2>
+        <ul class="features-list">
+          <li>Modern Roadster Design</li>
+          <li>Single Channel ABS</li>
+          <li>All-Digital Instrument Cluster</li>
+          <li>Tripper Navigation Ready</li>
+          <li>LED DRL with Halogen Headlamp</li>
+          <li>USB Charging Port</li>
+          <li>Disc Brake (Front & Rear)</li>
+          <li>Tubeless Tyres</li>
+          <li>Upswept Exhaust</li>
+          <li>Comfortable Ergonomics</li>
+          <li>Lightweight Frame</li>
+          <li>Electric Start Only</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="full-width-section">
+      <h2 style="color: white;">About the Hunter 350</h2>
+      <p class="description">
+        The Royal Enfield Hunter 350 represents a new generation of Royal Enfield motorcycles, designed specifically for urban riders who seek style, performance, and practicality. This roadster combines the brand's legendary heritage with contemporary design language, creating a motorcycle that's perfect for city commuting and weekend rides. With its lightweight construction and agile handling, the Hunter 350 offers an engaging riding experience.
+      </p>
+      <p class="description">
+        Built on the proven J-platform, the Hunter 350 features modern amenities like an all-digital instrument cluster, Tripper navigation readiness, and USB charging port. The motorcycle's design philosophy focuses on simplicity and functionality, making it an ideal choice for young riders entering the Royal Enfield family. Its distinctive styling, refined engine, and competitive pricing make it a compelling option in the modern classic segment.
+      </p>
+
+      <div class="performance-grid">
+        <div class="performance-card">
+          <span class="performance-number">20.2</span>
+          <span class="performance-label">bhp Power</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">27</span>
+          <span class="performance-label">Nm Torque</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">38+</span>
+          <span class="performance-label">kmpl Mileage</span>
+        </div>
+        <div class="performance-card">
+          <span class="performance-number">181</span>
+          <span class="performance-label">kg Weight</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="text-align: center;">
+      <a class="back-btn" href="/features">
+        ← Back to Dashboard
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumbnail) {
+   
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+    
+      thumbnail.classList.add('active');
+
+      document.getElementById('mainImage').src = thumbnail.src;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('.performance-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    document.querySelectorAll('.color-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.color-option').forEach(opt => {
+          opt.style.transform = 'scale(1)';
+          opt.style.borderWidth = '3px';
+        });
+        
+        this.style.transform = 'scale(1.2)';
+        this.style.borderWidth = '4px';
+        this.style.borderColor = '#c50000';
+      });
+    });
+  </script>
+</body>
+</html>
